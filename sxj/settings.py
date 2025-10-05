@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -151,5 +152,7 @@ STATIC_URL = 'static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
+# 添加默认的静态文件目录[收集使用]
+STATIC_ROOT = os.path.join(BASE_DIR, "static_all")
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'

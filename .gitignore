@@ -1,0 +1,77 @@
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Django
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+media/
+static/
+
+# Distribution / packaging
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+venv/
+ENV/
+env/
+.env
+.venv
+
+# IDE-specific files
+.idea/
+.vscode/
+*.swp
+*.swo
+*.sublime-*
+.DS_Store  # macOS specific
+
+# Coverage and test reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+
+# Django migrations (可选 - 有些团队选择提交)
+*/migrations/*.py
+!*/migrations/__init__.py
+
+# Secret keys and environment variables
+.env
+.env.local
+*.env
+
+# PIP requirements (可选 - 如果使用requirements.txt则保留)
+# requirements.txt
+# *.txt
+
+# Celery
+celerybeat-schedule
+
+# Django debug toolbar
+__debug__/
+
+# Editor directories and files
+.idea

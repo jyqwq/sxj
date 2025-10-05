@@ -1,5 +1,8 @@
 # sjx_background
 
+## 运行项目
+`python manage.py runserver`
+
 ## 生成requirements.txt文件
 `pip freeze > requirements.txt`
 ## 安装依赖

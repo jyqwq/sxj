@@ -25,7 +25,18 @@ SECRET_KEY = 'django-insecure-k^!)ywor0yz)xw%q9#te$2s*opd=3^+#45xvo(pv2$j*^4r4_l
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*', ]
+ALLOWED_HOSTS = []
+
+# 微信登录配置
+WECHAT_APPID = 'wx63d4beca113b4347'
+WECHAT_APPSECRET = '你的微信小程序或公众号APPSECRET'
+
+# 允许跨域请求（如果小程序域名与后端不同源）
+CORS_ALLOW_ALL_ORIGINS = False  # 生产环境不建议开启
+CORS_ALLOWED_ORIGINS = [
+    "https://你的小程序域名",
+    "http://localhost:8000",  # 本地开发环境
+]
 
 
 # Application definition
@@ -37,9 +48,17 @@ INSTALLED_APPS = [
     'django.contrib.sessions',  # 会话框架
     'django.contrib.messages',  # 消息框架
     'django.contrib.staticfiles',  # 管理静态文件的框架
+
+    # 第三方应用
+    'rest_framework',  # 注册 DRF
+    'drf_yasg',  # 注册 drf-yasg（文档工具）
+
+    'corsheaders', # 处理跨域请求
+    'user',  # 用户模块
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
